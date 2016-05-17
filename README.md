@@ -2,7 +2,7 @@ Export data from memcached for backup or replication
 
 Requirement:
 - libmemcached
-- python-memcache
+- python-memcached
 
 Useage:
 - memcached_export used to export data from memcached

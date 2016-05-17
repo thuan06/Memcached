@@ -11,3 +11,4 @@ Useage:
 - memcached_import used to import data to memcached
     + path = path to data file
     + host = ip running memcached
+    + port = port running memcached

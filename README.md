@@ -1,14 +1,13 @@
-Export data from memcache server,just for backup data
-For help
+Export data from memcached for backup or replication
 
-[root@localhost~]# python memcached-dump.py --help
-usage: memcached-dump.py [-h] [--host HOST] [--port PORT] [--path PATH]
+Requirement:
+- libmemcached
+- python-memcache
 
-optional arguments:
-  -h, --help   show this help message and exit
-  --host HOST  memcached server host,default[127.0.0.1]
-  --port PORT  memcached server port,default[11211]
-  --path PATH  File path,default[/tmp/memcached.json]
-Export data
-
-  [root@localhost]# python memcached-dump.py --path /tmp/memcached.json
+Useage:
+memcached_export used to export data from memcached
+  host = ip running memcached
+  path = location save data
+memcached_import used to import data to memcached
+  path = path to data file
+  host = ip running memcached

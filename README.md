@@ -5,10 +5,9 @@ Requirement:
 - python-memcached
 
 Useage:
-- memcached_export used to export data from memcached
-    + host = ip running memcached
-    + path = location save data
-- memcached_import used to import data to memcached
-    + path = path to data file
-    + host = ip running memcached
-    + port = port running memcached
+- memcached_export used to export data from memcached and export to new server
+    + host1 = ip export memcached data
+    + port1 = port running memcached on host1
+    + path = path to save temp key file of host1
+    + host2 = ip export memcached data
+    + port2 = port running memcached on host2

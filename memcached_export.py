@@ -11,10 +11,9 @@ port2 = 11211
 
 #--------------- Key export to file -------------
 key = subprocess.call("memdump --servers=%s" %host1,stdout=open("%s"%path, 'w'),shell=True)
-print "Kex Exported"
+print "Key Exported"
 #--------------Save key:value to a dic ------------
 m1 = memcache.Client(['%s:%d' %(host1,port1)],debug=0)
-
 lines = [line.rstrip('\n') for line in open('%s'%path)]
 print lines
 mem={}
@@ -24,4 +23,5 @@ for i in lines:
 #-----------Export dict to new server --------------
 m2 = memcache.Client(['%s:%d' %(host2,port2)],debug=0)
 for i in mem.keys():
-        m2.set(i, mem.get(i))
+        if m2.get(i)==None:
+                m2.set(i, mem.get(i))
